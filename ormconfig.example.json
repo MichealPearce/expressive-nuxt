@@ -1,0 +1,19 @@
+{
+	"type": "mysql",
+	"host": "localhost",
+	"port": 3306,
+	"username": "username",
+	"password": "password",
+	"database": "sa-api",
+
+	"synchronize": true,
+	"logging": false,
+	"entities": ["database/models/**/*.ts"],
+	"migrations": ["database/migrations/**/*.ts"],
+	"subscribers": ["database/subscribers/**/*.ts"],
+	"cli": {
+		"entitiesDir": "database/models",
+		"migrationsDir": "database/migrations",
+		"subscribersDir": "database/subscribers"
+	}
+}

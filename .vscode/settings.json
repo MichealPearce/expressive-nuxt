@@ -1,0 +1,6 @@
+{
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"prettier.endOfLine": "lf",
+	"files.insertFinalNewline": true
+}

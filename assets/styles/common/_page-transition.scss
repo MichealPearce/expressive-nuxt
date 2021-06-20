@@ -1,0 +1,28 @@
+.page-enter-active {
+	width: 100%;
+	height: 100%;
+
+	position: relative;
+	left: 0%;
+	top: 0%;
+	transition: top 0.5s;
+
+	&.page-enter {
+		top: 150%;
+	}
+}
+
+.page-leave-active {
+	width: 100%;
+	height: 100%;
+
+	position: relative;
+	top: 150%;
+	left: 0%;
+	transition: top 0.5s;
+
+	&.page-leave {
+		top: 0%;
+		transition: top 0s;
+	}
+}

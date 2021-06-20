@@ -1,0 +1,14 @@
+@mixin reset-input {
+	background-color: transparent;
+	margin: 0px;
+	border: none;
+	padding: 0px;
+	outline: none;
+	color: inherit;
+}
+
+@mixin reset-button {
+	padding: 0px;
+	border: none;
+	outline: none;
+}

@@ -1,0 +1,110 @@
+@import '../sassy';
+
+$switch-border-radius: 50px;
+$switch-color-background: $color-switch-background;
+$switch-color-active-background: $color-switch-active-background;
+$switch-color-bit: $color-switch-bit;
+$switch-color-active-bit: $color-switch-active-bit;
+
+.input-switch {
+	@include flex(column);
+	width: fit-content;
+	height: fit-content;
+
+	position: relative;
+
+	.input-switch-checkbox {
+		@include reset-input;
+		width: 100%;
+		height: 100%;
+
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		z-index: 2;
+
+		opacity: 0;
+		cursor: pointer;
+	}
+
+	.input-switch-graphic {
+		width: var(--input-switch-width, 75px);
+		height: var(--input-switch-height, 35px);
+
+		position: relative;
+
+		background-color: $switch-color-background;
+
+		cursor: pointer;
+
+		//border-radius: $switch-border-radius;
+		box-shadow: 0px 2px 3px rgba(#000, 0.23);
+		transition: background-color 0.25s;
+
+		&::after {
+			content: ' ';
+			display: block;
+
+			width: 25px;
+			height: 25px;
+
+			position: absolute;
+			left: 5px;
+			top: 50%;
+			transform: translate(0%, -50%);
+
+			background-color: $switch-color-bit;
+
+			//border-radius: $switch-border-radius;
+			transition: transform 0.25s, background-color 0.25s;
+		}
+	}
+
+	.input-switch-checkbox:checked + .input-switch-graphic {
+		background-color: $switch-color-active-background;
+
+		&::after {
+			transform: translate(calc(100% + 12.5px), -50%);
+			background-color: $switch-color-active-bit;
+		}
+	}
+
+	&:active {
+		.input-switch-graphic {
+			&::after {
+				transform: translate(0%, -50%) scale(0.5);
+			}
+		}
+
+		.input-switch-checkbox:checked + .input-switch-graphic {
+			&::after {
+				transform: translate(calc(100% + 12.5px), -50%) scale(0.5);
+			}
+		}
+	}
+}
+
+.input-switch.rounded {
+	.input-switch-graphic {
+		border-radius: $switch-border-radius;
+
+		&::after {
+			border-radius: $switch-border-radius;
+		}
+	}
+}
+
+.input-switch.compact {
+	transform: scale(0.7);
+}
+
+.input-switch.reverse-active-color {
+	.input-switch-checkbox:checked + .input-switch-graphic {
+		background-color: $switch-color-active-bit;
+
+		&::after {
+			transform: translate(calc(100% + 12.5px), -50%);
+			background-color: $switch-color-active-background;
+		}
+	}
+}

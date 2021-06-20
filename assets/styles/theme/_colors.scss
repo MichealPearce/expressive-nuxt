@@ -1,0 +1,22 @@
+$color-primary: #d32f2f; // #d32f2f
+$color-primary-darken: darken($color-primary, 10%);
+$color-primary-lighten: lighten($color-primary, 10%);
+$color-primary-text: white;
+
+$color-secondary: #455a64;
+
+$color-page-background: rgb(244, 244, 244);
+
+$color-text: rgb(0, 0, 0);
+$color-text-var: var(--color-text, $color-text);
+
+$color-header: rgb(0, 0, 0);
+
+$color-input-background: white;
+$color-input-label-text: #212121;
+$color-input-area-background: #f5f5f5;
+
+$color-switch-background: #e5e2e2;
+$color-switch-bit: white;
+$color-switch-active-background: $color-primary;
+$color-switch-active-bit: white;

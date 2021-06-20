@@ -1,0 +1,69 @@
+{
+	"compilerOptions": {
+		"target": "es6",
+		"module": "ESNext",
+		"moduleResolution": "Node",
+		"lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
+		"esModuleInterop": true,
+		"allowJs": true,
+		"sourceMap": true,
+		"strict": false,
+		"noEmit": true,
+		"experimentalDecorators": true,
+		"baseUrl": ".",
+		"paths": {
+			"@server": ["./server/index"],
+			"@server*": ["./server*"],
+			"@api*": ["./server/api*"],
+			"@database*": ["./server/database*"],
+			"@templates*": ["./templates*"],
+			"@channels*": ["./channels*"],
+			"@assets*": ["./assets*"],
+			"@components*": ["./components*"],
+			"@layouts*": ["./layouts*"],
+			"@middleware*": ["./middleware*"],
+			"@pages*": ["./pages*"],
+			"@plugins*": ["./plugins*"],
+			"@static*": ["./static*"],
+			"@store": ["./store/index.ts"],
+			"@store/*": ["./store/*"],
+			"@includes*": ["./includes*"],
+			"@styles*": ["./assets/styles*"],
+			"~/*": ["./*"],
+			"@/*": ["./*"]
+		},
+		"types": [
+			"@nuxt/types",
+			"@nuxtjs/axios",
+			"@nuxt/content",
+			"@types/node",
+			"@nuxtjs/pwa",
+			"@types/lodash"
+		],
+		"typeRoots": ["./includes"]
+	},
+	"exclude": ["node_modules", ".nuxt", "dist"],
+	"ts-node": {
+		"compilerOptions": {
+			"lib": ["es5", "es6"],
+			"target": "es6",
+			"module": "commonjs",
+			"moduleResolution": "node",
+			"emitDecoratorMetadata": true,
+			"experimentalDecorators": true,
+			"inlineSourceMap": true,
+			"esModuleInterop": true,
+			"strict": false,
+
+			"types": [
+				"@nuxt/types",
+				"@nuxtjs/axios",
+				"@types/node",
+				"@types/lodash",
+				"@types/bcrypt"
+			],
+
+			"baseUrl": "."
+		}
+	}
+}

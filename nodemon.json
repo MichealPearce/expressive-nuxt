@@ -1,0 +1,6 @@
+{
+	"exec": "cross-env DEBUG=sa:*,sa-deep:* ts-node ./index.ts",
+	"ext": "ts,js",
+	"watch": "./server",
+	"ignore": []
+}

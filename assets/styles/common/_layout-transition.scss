@@ -1,0 +1,22 @@
+.layout-enter-active,
+.layout-leave-active {
+	opacity: 1;
+	transition: opacity 0.5s 0.25s;
+
+	.loading-screen {
+		opacity: 1 !important;
+		transition: opacity 0.25s !important;
+	}
+
+	&.layout-leave-active {
+		opacity: 0;
+	}
+
+	&.layout-enter {
+		opacity: 0;
+	}
+
+	&.layout-leave {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,125 @@
+@import '../sassy';
+$input-radio-color-background: $color-input-background;
+
+$input-radio-mark-color: var(--input-radio-mark-color, $color-primary);
+$input-radio-mark-color-background: var(
+	--input-radio-mark-color-background,
+	#424242
+);
+$input-radio-mark-size: var(--input-radio-mark-size, 15px);
+$input-radio-mark-inner-size: var(--input-radio-mark-inner-size, 50%);
+
+.input-radio-buttons {
+	@include flex(column);
+	color: $input-radio-mark-color-background;
+
+	.input-radio-label {
+		// margin-bottom: 0.5em;
+		// font-weight: bold;
+		user-select: none;
+	}
+
+	.input-radio-wrap {
+		@include flex(row, flex-start, stretch);
+		width: 100%;
+
+		border-radius: $border-radius;
+		overflow: hidden;
+		box-shadow: 0px 2px 3px rgba(#000, 0.23);
+
+		.input-radio {
+			@include flex(row, flex-start, center);
+			padding: 0.75em;
+
+			position: relative;
+			z-index: 1;
+
+			font-size: 0.9em;
+
+			cursor: pointer;
+
+			* {
+				cursor: pointer;
+			}
+
+			&::before {
+				content: ' ';
+				width: 100%;
+				height: 100%;
+
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				z-index: -1;
+
+				background-color: $input-radio-color-background;
+				transition: filter 0.25s;
+			}
+
+			input {
+				display: none;
+			}
+
+			.radio-mark {
+				@include flex(column, center, center);
+				width: $input-radio-mark-size;
+				height: $input-radio-mark-size;
+				flex-shrink: 0;
+
+				margin: 0px;
+				margin-right: 0.75em;
+
+				background-color: $input-radio-mark-color-background;
+				border-radius: 100%;
+
+				transform: scale(1);
+
+				transition: background-color 0.25s, transform 0.25s;
+			}
+
+			&:hover,
+			&.selected {
+				&::before {
+					filter: brightness(90%);
+				}
+			}
+
+			&.selected {
+				.radio-mark {
+					background-color: $input-radio-mark-color;
+				}
+
+				.input-radio-label {
+					font-weight: 900;
+					font-style: italic;
+				}
+			}
+
+			&:active {
+				.radio-mark {
+					transform: scale(0.7);
+				}
+			}
+		}
+	}
+}
+
+.input-radio-buttons.flat {
+	box-shadow: none;
+
+	.input-radio-wrap {
+		box-shadow: none;
+	}
+}
+
+.input-radio-buttons.no-bg {
+	.input-radio::before {
+		opacity: 0;
+	}
+}
+
+.input-radio-buttons.column {
+	.input-radio-wrap {
+		@include flex(column, flex-start, stretch);
+	}
+}

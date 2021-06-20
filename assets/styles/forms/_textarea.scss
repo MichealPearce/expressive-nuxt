@@ -1,0 +1,36 @@
+@import '../sassy';
+
+$input-color-background: $color-input-background;
+$input-color-label-text: $color-input-label-text;
+$input-color-area-background: $color-input-area-background;
+
+$input-padding: var(--input-padding, 0.75em);
+$input-label-font-size: var(--input-label-font-size, 0.9em);
+
+$input-border-radius: $border-radius;
+
+.form-input.textarea {
+	.input-area {
+		textarea {
+			@include reset-input;
+			width: 100%;
+			min-height: 75px;
+
+			padding: $input-padding;
+
+			color: #424242;
+			font-weight: 500;
+			letter-spacing: 0.05em;
+
+			resize: none;
+		}
+	}
+}
+
+.form-input.textarea.box-it {
+	border-radius: 0px;
+
+	.input-area {
+		border-radius: 0px;
+	}
+}

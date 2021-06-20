@@ -1,0 +1,61 @@
+$layout-gap: var(--layout-gap, 1em);
+
+$layout-column-gap: var(--layout-column-gap, $layout-gap);
+$layout-column-count: var(--layout-column-count, 1);
+$layout-column-size: var(--layout-column-size, auto);
+$layout-column-template: var(
+	--layout-column-template,
+	repeat($layout-column-count, $layout-column-size)
+);
+
+$layout-row-count: var(--layout-row-count, 1);
+$layout-row-size: var(--layout-row-size, auto);
+$layout-row-template: var(
+	--layout-row-template,
+	repeat($layout-row-count, $layout-row-size)
+);
+$layout-row-gap: var(--layout-row-gap, $layout-gap);
+
+.layout-column {
+	display: grid;
+	grid-template-columns: $layout-column-template;
+	column-gap: $layout-column-gap;
+	row-gap: $layout-row-gap;
+	height: fit-content;
+
+	align-items: start;
+
+	& > * {
+		width: 100%;
+	}
+
+	@for $i from 2 through 30 {
+		&.columns-#{$i} {
+			$gap: calc(#{$layout-column-gap} * calc(#{$i} - 1));
+			$column-width: calc(calc(100% - #{$gap}) / #{$i});
+			grid-template-columns: repeat($i, $column-width);
+		}
+	}
+}
+
+.layout-row {
+	display: grid;
+	grid-template-rows: $layout-row-template;
+	column-gap: $layout-column-gap;
+	row-gap: $layout-row-gap;
+	height: fit-content;
+
+	align-items: start;
+
+	& > * {
+		width: 100%;
+	}
+
+	@for $i from 2 through 30 {
+		&.rows-#{$i} {
+			$gap: calc(#{$layout-row-gap} * calc(#{$i} - 1));
+			$row-height: calc(calc(100% - #{$gap}) / #{$i});
+			grid-template-rows: repeat($i, $row-height);
+		}
+	}
+}

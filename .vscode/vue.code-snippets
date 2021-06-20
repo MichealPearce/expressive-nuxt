@@ -1,0 +1,16 @@
+{
+	"vue-class-component": {
+		"prefix": "vue-class-component",
+		"body": [
+			"<script lang=\"ts\">",
+			"import { Vue, Component } from 'nuxt-property-decorator'\n",
+			"@Component",
+			"export default class ${1:ComponentName} extends Vue {}",
+			"</script>\n",
+			"<template>$0</template>\n",
+			"<style lang=\"scss\" scoped>",
+			"@import '@sassy';",
+			"</style>"
+		]
+	}
+}

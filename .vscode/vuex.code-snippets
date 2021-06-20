@@ -1,0 +1,17 @@
+{
+	"vuex-class-module": {
+		"prefix": "vuex-class-module",
+		"body": [
+			"import * as V from 'vuex-module-decorators'\n",
+			"export module ${1:ModuleName} {",
+			"\t@V.Module({",
+			"\t\tname: '${2:namespace}',",
+			"\t\tstateFactory: true,",
+			"\t\tnamespaced: true",
+			"\t})",
+			"\texport class Module extends V.VuexModule {$0}",
+			"}\n",
+			"export default ${1:ModuleName}.Module\n"
+		]
+	}
+}

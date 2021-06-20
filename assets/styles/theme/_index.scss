@@ -1,0 +1,10 @@
+@import 'colors';
+@import 'text';
+
+$scrollbar-size: 4px;
+$scrollbar-button-size: 100%;
+$scrollbar-track-background: $color-page-background;
+$scrollbar-thumb-background: $color-primary;
+
+$border-radius-var: 5px;
+$border-radius: var(--border-radius, $border-radius-var);

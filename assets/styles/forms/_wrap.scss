@@ -1,0 +1,10 @@
+@import '../sassy';
+
+$form-wrap-column-spacing: var(--form-wrap-column-spacing, 1em);
+$form-wrap-row-spacing: var(--form-wrap-row-spacing, 1em);
+
+.form-wrap {
+	* {
+		box-sizing: border-box;
+	}
+}

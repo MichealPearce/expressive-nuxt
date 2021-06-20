@@ -1,0 +1,113 @@
+@import 'theme';
+@import 'client-theme';
+@import 'mixins';
+@import 'reset';
+
+@mixin flex($d: row, $j: flex-start, $a: flex-start) {
+	display: flex;
+	flex-direction: $d;
+	justify-content: $j;
+	align-items: $a;
+}
+
+@mixin glass-it($color: rgba($color-primary, 0.63), $blur: 4px) {
+	background: $color;
+	backdrop-filter: blur($blur);
+	-webkit-backdrop-filter: blur($blur);
+}
+
+@mixin fancy-scrollbar {
+	&.hide-scrollbar {
+		&::-webkit-scrollbar-thumb {
+			background-color: $scrollbar-track-background;
+			border: 0px solid $scrollbar-track-background;
+			border-radius: 50px;
+			filter: none;
+			transition: background-color 0.25s, filter 0.25s;
+		}
+
+		&:hover {
+			&::-webkit-scrollbar-thumb {
+				background-color: $scrollbar-thumb-background;
+				transition: background-color 0.25s, filter 0.25s;
+			}
+		}
+	}
+
+	&::-webkit-scrollbar {
+		width: $scrollbar-size;
+		height: $scrollbar-size;
+	}
+
+	&::-webkit-scrollbar-button {
+		width: $scrollbar-button-size;
+		height: $scrollbar-button-size;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: $scrollbar-thumb-background;
+		border: 0px solid $scrollbar-track-background;
+		border-radius: 50px;
+		filter: none;
+		transition: background-color 0.25s, filter 0.25s;
+	}
+	&::-webkit-scrollbar-thumb:active {
+		filter: brightness(80%);
+	}
+	&::-webkit-scrollbar-track {
+		background: $scrollbar-track-background;
+		border: 0px none $scrollbar-track-background;
+		border-radius: 50px;
+	}
+	&::-webkit-scrollbar-track:hover {
+		background: $scrollbar-track-background;
+	}
+	&::-webkit-scrollbar-track:active {
+		background: $scrollbar-track-background;
+	}
+
+	&::-webkit-scrollbar-corner {
+		background: transparent;
+	}
+}
+
+@mixin horizontal-list-item($spacing: 0.5em) {
+	margin-left: $spacing;
+	margin-right: $spacing;
+
+	&:first-of-type {
+		margin-left: 0px;
+
+		&:last-of-type {
+			margin-right: 0px;
+		}
+	}
+
+	&:last-of-type {
+		margin-right: 0px;
+
+		&:first-of-type {
+			margin-left: 0px;
+		}
+	}
+}
+
+@mixin vertical-list-item($spacing: 0.5em) {
+	margin-top: $spacing;
+	margin-bottom: $spacing;
+
+	&:first-of-type {
+		margin-top: 0px;
+
+		&:last-of-type {
+			margin-bottom: 0px;
+		}
+	}
+
+	&:last-of-type {
+		margin-bottom: 0px;
+
+		&:first-of-type {
+			margin-top: 0px;
+		}
+	}
+}
