@@ -31,6 +31,7 @@ export default class NavigationSidebar extends Vue {
 	row-gap: 0.5em;
 
 	.navigation.item {
+		display: block;
 		padding: 0.5em;
 
 		transition: all 0.25s;
