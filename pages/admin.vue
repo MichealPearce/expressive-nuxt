@@ -4,6 +4,7 @@ import { ADMIN_MENU } from '@store/menus'
 import { Vue, Component } from 'nuxt-property-decorator'
 
 @Component({
+	layout: 'admin',
 	middleware: ['authed']
 })
 export default class PageAdmin extends Vue {
