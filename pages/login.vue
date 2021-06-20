@@ -39,29 +39,19 @@ export default class PageLogin extends Vue {
 
 <template>
 	<page-base class="login">
-		<form-base class="login" @submit="login">
+		<form-component class="login" @submit="login">
 			{{ $store.state.test }}
-			<form-input
-				v-model="creds.username"
-				class="username"
-				:input="{
-					name: 'username',
-					label: 'Username'
-				}"
-			/>
+			<form-input v-model="creds.username" class="username" label="Username" />
 
 			<form-input
 				v-model="creds.password"
 				class="password"
-				:input="{
-					name: 'password',
-					label: 'Password',
-					type: 'password'
-				}"
+				label="Password"
+				type="password"
 			/>
 
 			<form-button>Login</form-button>
-		</form-base>
+		</form-component>
 	</page-base>
 </template>
 
