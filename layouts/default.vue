@@ -16,7 +16,7 @@ export default class LayoutDefault extends Vue {
 	<layout-base class="default">
 		<component :is="navigation" />
 
-		<nuxt keep-alive :keep-alive-props="{ include: '.+Page' }" />
+		<nuxt keep-alive :keep-alive-props="{ include: '^(Page|page).*' }" />
 	</layout-base>
 </template>
 
