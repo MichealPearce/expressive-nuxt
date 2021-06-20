@@ -20,9 +20,18 @@ export default {
 				href: 'https://fonts.google.com'
 			},
 			{
+				rel: 'preconnect',
+				href: 'https://cdnjs.cloudflare.com'
+			},
+			{
 				rel: 'stylesheet',
 				href:
 					'https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap'
+			},
+			{
+				rel: 'stylesheet',
+				href:
+					'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'
 			}
 		]
 	},
