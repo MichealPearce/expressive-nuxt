@@ -1,3 +1,4 @@
+import { UserData } from '@includes/interfaces'
 import { $api } from '@plugins/api'
 import * as V from 'vuex-module-decorators'
 
@@ -8,7 +9,12 @@ export module Auth {
 		namespaced: true
 	})
 	export class Module extends V.VuexModule {
-		user: any = false
+		user: UserData | false = false
+
+		@V.Mutation
+		set(user: UserData | false) {
+			this.user = user
+		}
 
 		@V.MutationAction({ mutate: ['user'], rawError: true })
 		login(creds: any) {

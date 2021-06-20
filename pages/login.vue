@@ -40,17 +40,27 @@ export default class PageLogin extends Vue {
 <template>
 	<page-base class="login">
 		<form-component class="login" @submit="login">
-			{{ $store.state.test }}
-			<form-input v-model="creds.username" class="username" label="Username" />
+			<brand-name element="h1" />
+
+			<form-input
+				v-model="creds.username"
+				class="username expanded flat"
+				label="Username"
+				placeholder="jimmy.james"
+			/>
 
 			<form-input
 				v-model="creds.password"
-				class="password"
+				class="password expanded flat"
 				label="Password"
 				type="password"
+				placeholder="epic-passss"
 			/>
 
-			<form-button>Login</form-button>
+			<form-button type="submit" class="flat">
+				<span>Login</span>
+				<i class="fas fa-key" />
+			</form-button>
 		</form-component>
 	</page-base>
 </template>
@@ -62,7 +72,12 @@ export default class PageLogin extends Vue {
 	@include flex(column, center, center);
 
 	.form.login {
-		@include flex(column);
+		width: 500px;
+		max-width: 90%;
+
+		.form.button {
+			justify-self: end;
+		}
 	}
 }
 </style>

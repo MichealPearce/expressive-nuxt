@@ -8,19 +8,12 @@ export interface RootState {}
 export const plugins = [initializer]
 export * from '@includes/store-accessor'
 
-export const state = () => ({
-	test: false
-})
+export const state = () => ({})
 
-export const mutations = {
-	test(state, p) {
-		state.test = p
-	}
-}
+export const mutations = {}
 
 export const actions: ActionTree<RootState, RootState> = {
 	nuxtServerInit(ctx, { req }) {
-		console.log('nuxt init', req.session)
-		ctx.commit('test', req.session.test)
+		if (req?.session?.user) ctx.commit('auth/set', req.session.user)
 	}
 }
