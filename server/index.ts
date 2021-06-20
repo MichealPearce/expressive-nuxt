@@ -18,6 +18,7 @@ export default loadNuxt(dev ? 'dev' : 'start').then(async nuxt => {
 
 	// attach basic middleware used in all routes
 	render.use(session)
+	render.use(express.json())
 
 	// attach the api routes
 	render.use('/api', api)
