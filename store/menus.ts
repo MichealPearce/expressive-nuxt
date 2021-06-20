@@ -10,8 +10,8 @@ export const ADMIN_MENU = [
 		title: 'Dashboard',
 		children: [
 			{
-				title: 'Menus',
-				url: '/admin/menus'
+				title: 'Users',
+				url: '/admin/users'
 			}
 		]
 	},
