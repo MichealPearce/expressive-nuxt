@@ -32,7 +32,7 @@ createConnections()
 		// Add connection to global scope for use later
 		global.db = connection
 
-		import('@includes/mailer')
+		if (process.env.SMTP_ENABLED === 'true') import('@includes/mailer')
 		return setup()
 			.then(() => import('./server'))
 			.catch(err => {
