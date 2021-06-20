@@ -148,7 +148,7 @@ export default class FormButton extends Vue {
 <template>
 	<button
 		ref="container"
-		class="form-button"
+		class="form-button form button"
 		:class="[ripple.clicked ? 'clicked' : false, disabled ? 'disabled' : false]"
 		:disabled="disabled"
 		:type="type"
