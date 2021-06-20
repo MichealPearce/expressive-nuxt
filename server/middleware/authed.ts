@@ -16,11 +16,6 @@ export default function authed(
 			.then(user => {
 				debug('user authenicated and loaded')
 				req.authed = user
-
-				// if (req.moment && user.timezone) {
-				// 	req.moment.tz.setDefault(user.timezone)
-				// }
-
 				next()
 			})
 			.catch(err => {
