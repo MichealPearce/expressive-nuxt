@@ -20,7 +20,7 @@ export default class NavigationMenu extends Vue {
 </script>
 
 <template>
-	<transition-group name="menu-item" tag="section" class="navigation menu">
+	<section class="navigation menu">
 		<template v-for="item in menu_items">
 			<navigation-item
 				v-if="!item.children"
@@ -38,32 +38,9 @@ export default class NavigationMenu extends Vue {
 				/>
 			</section>
 		</template>
-	</transition-group>
+	</section>
 </template>
 
 <style lang="scss" scoped>
 @import '@sassy';
-
-.menu-item-move {
-	transition: transform 0.8s ease;
-}
-
-.navigation.item {
-	opacity: 1;
-
-	&.menu-item-enter-active,
-	&.menu-item-leave-active {
-		opacity: 0;
-		transition: all 0.8s ease;
-	}
-
-	&.menu-item-enter-active,
-	&.menu-item-enter-to,
-	&.menu-item-enter-from,
-	&.menu-item-leave-from,
-	&.menu-item-leave-to {
-		opacity: 0;
-		margin-left: -100%;
-	}
-}
 </style>
