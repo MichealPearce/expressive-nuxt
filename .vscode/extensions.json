@@ -1,0 +1,17 @@
+{
+	"recommendations": [
+		"dbaeumer.vscode-eslint",
+		"aaron-bond.better-comments",
+		"mhutchie.git-graph",
+		"eamodio.gitlens",
+		"wix.vscode-import-cost",
+		"christian-kohler.path-intellisense",
+		"oderwat.indent-rainbow",
+		"rvest.vs-code-prettier-eslint",
+		"esbenp.prettier-vscode",
+		"syler.sass-indented",
+		"mrmlnc.vscode-scss",
+		"octref.vetur",
+		"visualstudioexptteam.vscodeintellicode"
+	]
+}
