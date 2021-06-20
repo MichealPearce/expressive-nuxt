@@ -1,11 +1,6 @@
-import Model, { ModelData } from '@database/Model'
-import { Column, Entity, Index, PrimaryColumn } from 'typeorm'
-
-export interface UserData extends ModelData {
-	name: string
-	email: string
-	password?: string
-}
+import Model from '@database/Model'
+import { UserData } from '@includes/interfaces'
+import { Column, Entity } from 'typeorm'
 
 @Entity({
 	name: 'sa_users'

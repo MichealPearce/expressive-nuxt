@@ -11,13 +11,7 @@ import {
 } from 'typeorm'
 import moment, { Moment, isMoment } from 'moment-timezone'
 import helpers from '@includes/helpers'
-
-export interface ModelData {
-	id?: number
-	created?: Moment
-	updated?: Moment
-	deleted?: Moment
-}
+import { ModelData } from '@includes/interfaces'
 
 export const ModelDateTimeUTCTransformer = {
 	to: v => {

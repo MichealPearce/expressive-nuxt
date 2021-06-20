@@ -1,10 +1,6 @@
-import Model, { ModelData } from '@database/Model'
+import Model from '@database/Model'
+import { MenuData } from '@includes/interfaces'
 import { Column, Entity } from 'typeorm'
-
-export interface MenuData extends ModelData {
-	slug: string
-	name: string
-}
 
 @Entity({
 	name: 'sa_menus'
