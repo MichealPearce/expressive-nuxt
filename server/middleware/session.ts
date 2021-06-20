@@ -7,10 +7,6 @@ export default session({
 	secret: process.env.PASSWORD_SALT,
 	resave: false,
 	saveUninitialized: false,
-	cookie: {
-		domain: process.env.CLIENT_HOST,
-		maxAge: 100000000
-	},
 	store: new FileStore({
 		path: './bin/.sessions',
 		retries: 0
