@@ -230,6 +230,7 @@ $input-border-radius: $border-radius;
 }
 
 .form-input.no-label {
+	padding-top: 0.5em;
 	.input-label {
 		display: none;
 	}

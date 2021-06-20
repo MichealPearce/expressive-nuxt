@@ -25,6 +25,10 @@ $button-border-radius: $border-radius;
 	overflow: hidden;
 	box-shadow: 0px 2px 3px rgba(#000, 0.23);
 
+	* {
+		pointer-events: none;
+	}
+
 	.ripple-effect {
 		width: 0px;
 		height: 0px;
@@ -34,10 +38,10 @@ $button-border-radius: $border-radius;
 		top: var(--mouse-top);
 		z-index: -1;
 
-		background-color: $color-primary-lighten;
+		background-color: white;
 		opacity: 1;
 		border-radius: 100%;
-		box-shadow: 0px 0px 0px 0px $color-primary-lighten;
+		box-shadow: 0px 0px 0px 0px white;
 
 		pointer-events: none;
 		transition: opacity 0s, box-shadow 0.25s;
@@ -59,7 +63,7 @@ $button-border-radius: $border-radius;
 
 	&:hover:not(.clicked):not(:disabled) {
 		.ripple-effect {
-			box-shadow: 0px 0px 90px 30px $color-primary-lighten;
+			box-shadow: 0px 0px 90px 30px white;
 		}
 	}
 
