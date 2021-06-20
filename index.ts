@@ -1,5 +1,6 @@
 import 'module-alias/register'
 import 'reflect-metadata'
+import '@includes/types/express'
 
 import { Connection, createConnections } from 'typeorm'
 import setup from '@includes/setup'

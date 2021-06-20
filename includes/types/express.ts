@@ -1,5 +1,5 @@
-import User, { UserData } from '@database/models/User'
-import { Express } from 'express'
+import User from '@database/models/User'
+import { UserData } from '@includes/interfaces'
 import { Session, SessionData } from 'express-session'
 import moment from 'moment-timezone'
 
@@ -23,16 +23,6 @@ declare module 'express' {
 }
 
 declare global {
-	namespace session {
-		interface Session {
-			user?: UserData
-		}
-
-		interface SessionData {
-			user?: UserData
-		}
-	}
-
 	namespace Express {
 		interface Request {
 			session: Session & Partial<SessionData>
