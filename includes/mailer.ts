@@ -6,7 +6,7 @@ const debug = require('debug')('sa:mailer')
 
 export class Mailer {
 	_mail: Mail
-	from: string = 'info@clublisi.com'
+	from: string = process.env.SMTP_SENDER
 
 	constructor(args: SMTPTransport.Options) {
 		this._mail = nodemailer.createTransport(args)
@@ -25,8 +25,8 @@ export class Mailer {
 }
 
 export default new Mailer({
-	host: 'smtp.mandrillapp.com',
-	port: 587,
+	host: process.env.SMTP_HOST,
+	port: Number(process.env.SMTP_PORT),
 	secure: false,
 	auth: {
 		user: process.env.SMTP_USER,
