@@ -8,12 +8,12 @@
 
 	"synchronize": true,
 	"logging": false,
-	"entities": ["database/models/**/*.ts"],
-	"migrations": ["database/migrations/**/*.ts"],
-	"subscribers": ["database/subscribers/**/*.ts"],
+	"entities": ["server/database/models/**/*.ts"],
+	"migrations": ["server/database/migrations/**/*.ts"],
+	"subscribers": ["server/database/subscribers/**/*.ts"],
 	"cli": {
-		"entitiesDir": "database/models",
-		"migrationsDir": "database/migrations",
-		"subscribersDir": "database/subscribers"
+		"entitiesDir": "server/database/models",
+		"migrationsDir": "server/database/migrations",
+		"subscribersDir": "server/database/subscribers"
 	}
 }
