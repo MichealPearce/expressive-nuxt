@@ -65,7 +65,7 @@
 		"@types/multer": "^1.4.5",
 		"@types/node": "^16.3.1",
 		"@types/nodemailer": "^6.4.0",
-		"@types/session-file-store": "^1.2.1",
+		"@types/session-file-store": "^1.2.2",
 		"@types/systeminformation": "^3.54.1",
 		"babel-eslint": "^10.1.0",
 		"eslint": "^7.30.0",

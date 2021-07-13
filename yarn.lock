@@ -1868,10 +1868,10 @@
     "@types/mime" "^1"
     "@types/node" "*"
 
-"@types/session-file-store@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@types/session-file-store/-/session-file-store-1.2.1.tgz#701d84cc1e7d9ed0e6023a4b1f14d9e4c83e4d2f"
-  integrity sha512-7k4fs9ZMsZvVREw76GT9STL37dvDogDaL5CYj4QAssbixRm6Q8g9d+/gmhVK7L7XsgvEPSkj9VZlYTLMmoKORw==
+"@types/session-file-store@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@types/session-file-store/-/session-file-store-1.2.2.tgz#14a90d86a2356bfe09c7372e5a2f27db3b027826"
+  integrity sha512-l9yZ+PQ8vaXhch03MrV+25BIbhKpeWfZB++3njPIm6lKeDGRS2qF2elLuVa4XrhfJbObqW0puhB3A6FCbkraZg==
   dependencies:
     "@types/express" "*"
     "@types/express-session" "*"
