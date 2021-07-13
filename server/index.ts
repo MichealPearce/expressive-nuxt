@@ -2,10 +2,9 @@ import http from 'http'
 import express from 'express'
 import _ from 'lodash'
 import api from '@api/index'
+import { loadNuxt, build } from 'nuxt'
 import session from './middleware/session'
 import routes from './routes'
-
-const { loadNuxt, build } = require('nuxt')
 
 // Nuxt's render (using Connect) seems to ignore or override any handlers added to it so we create our own instance
 const render = express()
