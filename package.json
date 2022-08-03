@@ -75,6 +75,6 @@
 		"eslint-plugin-vue": "^7.13.0",
 		"fibers": "^5.0.0",
 		"prettier": "^2.3.2",
-		"sass": "^1.34.1"
+		"sass": "^1.54.1"
 	}
 }
