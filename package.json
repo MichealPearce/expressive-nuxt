@@ -39,7 +39,7 @@
 		"mysql2": "^2.2.5",
 		"nodemailer": "^6.5.0",
 		"nodemon": "^2.0.12",
-		"nuxt": "^2.15.3",
+		"nuxt": "^2.15.8",
 		"nuxt-property-decorator": "^2.9.1",
 		"reflect-metadata": "^0.1.10",
 		"session-file-store": "^1.5.0",
